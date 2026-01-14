@@ -64,30 +64,30 @@ export const PWAPrompt = () => {
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 50, scale: 0.95 }}
                 transition={{ type: 'spring', damping: 20, stiffness: 300 }}
-                className="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-[400px] z-[10000]"
+                className="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-[400px] z-[10000] light-neo-theme"
             >
-                <div className="glass-strong shadow-2xl rounded-3xl p-6 relative overflow-hidden ring-1 ring-white/20">
-                    {/* Premium Glass Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 via-transparent to-black/5 pointer-events-none" />
-                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-melrose-purple/20 blur-3xl rounded-full pointer-events-none" />
+                <div className="bg-background/90 backdrop-blur-xl shadow-neo-lg rounded-3xl p-6 relative overflow-hidden ring-1 ring-border border border-white/50">
+                    {/* Soft gradient Overlay */}
+                    <div className="absolute inset-0 bg-soft-gradient opacity-50 pointer-events-none" />
+                    <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
 
                     <button
                         onClick={handleDismiss}
-                        className="absolute top-4 right-4 p-2 rounded-full hover:bg-white/10 transition-all active:scale-95 z-10"
+                        className="absolute top-4 right-4 p-2 rounded-full hover:bg-black/5 transition-all active:scale-95 z-10"
                         aria-label="Close"
                     >
-                        <X className="w-4 h-4 text-white/60" />
+                        <X className="w-4 h-4 text-foreground/60" />
                     </button>
 
                     <div className="flex items-start gap-5 relative z-0">
-                        <div className="w-20 h-20 rounded-2xl bg-white/10 backdrop-blur-md shadow-xl flex items-center justify-center p-3 shrink-0 border border-white/30 ring-4 ring-white/5">
-                            <img src={logo} alt="Academy Logo" className="w-full h-full object-contain filter drop-shadow-lg" />
+                        <div className="w-20 h-20 rounded-2xl bg-white shadow-neo flex items-center justify-center p-3 shrink-0 border border-white">
+                            <img src={logo} alt="Academy Logo" className="w-full h-full object-contain" />
                         </div>
                         <div className="flex-1 pt-1">
-                            <h3 className="font-bold text-xl tracking-tight mb-2 text-white font-display">
-                                Georges Claude Academy
+                            <h3 className="font-bold text-xl tracking-tight mb-2 text-foreground font-display">
+                                Groupe Scolaire Niels Bohr
                             </h3>
-                            <p className="text-sm text-white/80 leading-relaxed font-medium">
+                            <p className="text-sm text-foreground/80 leading-relaxed font-medium">
                                 {isIOS
                                     ? "Ajoutez l'application à votre écran d'accueil pour un accès instantané."
                                     : "Installez notre application pour une expérience fluide et hors-ligne."}
@@ -97,8 +97,8 @@ export const PWAPrompt = () => {
 
                     <div className="mt-8 flex gap-3 relative z-0">
                         {isIOS ? (
-                            <div className="text-[13px] text-white/90 bg-white/10 backdrop-blur-sm p-4 rounded-xl w-full border border-white/20 flex items-center justify-center gap-2">
-                                <Share className="w-4 h-4 text-melrose-blue" />
+                            <div className="text-[13px] text-foreground/90 bg-background/50 backdrop-blur-sm p-4 rounded-xl w-full border border-border flex items-center justify-center gap-2">
+                                <Share className="w-4 h-4 text-primary" />
                                 <span>Appuyez sur "Partager" puis "Sur l'écran d'accueil"</span>
                             </div>
                         ) : (
@@ -106,7 +106,7 @@ export const PWAPrompt = () => {
                                 <Button
                                     variant="ghost"
                                     onClick={handleDismiss}
-                                    className="flex-1 h-12 rounded-xl text-white/80 hover:text-white hover:bg-white/10 border border-white/10 transition-all font-semibold"
+                                    className="flex-1 h-12 rounded-xl text-foreground/70 hover:text-foreground hover:bg-black/5 border border-border transition-all font-semibold"
                                 >
                                     Plus tard
                                 </Button>

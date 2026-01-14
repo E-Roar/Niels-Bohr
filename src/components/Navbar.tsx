@@ -56,7 +56,7 @@ export const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="absolute top-2 left-4 z-50 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full glass-mid border border-white/20 shadow-lg p-2"
           >
-            <img src={logo} alt="Georges Claude Academy" className="w-full h-full object-contain" />
+            <img src={logo} alt="Groupe Scolaire Niels Bohr" className="w-full h-full object-contain" />
           </motion.a>
 
           {/* Spacer to push nav items right since logo is absolute */}

@@ -80,8 +80,8 @@ export default {
       },
       boxShadow: {
         'neo': 'var(--neo-shadow-light), var(--neo-shadow-dark)',
-        'neo-sm': '-4px -4px 10px 0px hsl(32 50% 65% / 0.5), 4px 4px 10px 0px hsl(20 50% 35% / 0.4)',
-        'neo-lg': '-12px -12px 30px 0px hsl(32 50% 65% / 0.4), 12px 12px 30px 0px hsl(20 50% 35% / 0.5)',
+        'neo-sm': 'var(--neo-shadow-sm-light), var(--neo-shadow-sm-dark)',
+        'neo-lg': 'var(--neo-shadow-lg-light), var(--neo-shadow-lg-dark)',
         'neo-inset': 'var(--neo-shadow-inset-light), var(--neo-shadow-inset-dark)',
         'glow-purple': '0 0 40px hsl(280 70% 55% / 0.4)',
         'glow-blue': '0 0 40px hsl(195 85% 50% / 0.4)',

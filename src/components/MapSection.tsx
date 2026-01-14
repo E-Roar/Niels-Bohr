@@ -76,8 +76,8 @@ export const MapSection = () => {
                     <Popup>
                       <div className="text-center">
                         <img src={logo} alt="Melrose" className="w-12 h-12 mx-auto mb-2" />
-                        <span className="font-bold">Georges Claude Academy</span><br />
-                        Académie Georges Claude, centre Sidi Bouzid, El Jadida
+                        <span className="font-bold">Groupe Scolaire Niels Bohr</span><br />
+                        ALALLYA, El Jadida, Morocco
                       </div>
                     </Popup>
                   </Marker>

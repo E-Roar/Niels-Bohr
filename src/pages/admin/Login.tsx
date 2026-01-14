@@ -23,7 +23,7 @@ const AdminLogin = () => {
     };
 
     return (
-        <div className="min-h-screen flex items-center justify-center animated-gradient-bg p-4 font-quicksand rtl:font-tajawal">
+        <div className="min-h-screen flex items-center justify-center light-neo-theme bg-soft-gradient p-4 font-quicksand rtl:font-tajawal">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ const AdminLogin = () => {
                         variant="ghost"
                         size="sm"
                         onClick={toggleLanguage}
-                        className="bg-white/80 backdrop-blur"
+                        className="bg-background/80 backdrop-blur text-foreground"
                         title={language === 'fr' ? 'Switch to Arabic' : 'Passer en Français'}
                     >
                         {language === 'fr' ? 'ع' : 'Fr'}
@@ -43,12 +43,12 @@ const AdminLogin = () => {
                 </div>
 
                 <Card className="overflow-hidden">
-                    <div className="h-2 bg-gradient-to-r from-melrose-purple via-melrose-blue to-melrose-green" />
+                    <div className="h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
 
                     <CardHeader className="text-center pb-2">
                         <motion.img
                             src={logo}
-                            alt="Georges Claude Academy"
+                            alt="Groupe Scolaire Niels Bohr"
                             className="h-24 w-auto mx-auto mb-4"
                             initial={{ scale: 0.8 }}
                             animate={{ scale: 1 }}
@@ -64,13 +64,13 @@ const AdminLogin = () => {
 
                     <CardContent>
                         {/* Demo credentials notice */}
-                        <div className="mb-6 p-4 rounded-2xl bg-melrose-yellow/20 border border-melrose-yellow/30">
+                        <div className="mb-6 p-4 rounded-2xl bg-accent/50 border border-accent">
                             <div className="flex items-start gap-3">
-                                <AlertCircle className="w-5 h-5 text-melrose-yellow mt-0.5" />
+                                <AlertCircle className="w-5 h-5 text-primary mt-0.5" />
                                 <div className="text-sm">
                                     <p className="font-semibold text-foreground">{t.common.demoMode}</p>
                                     <p className="text-muted-foreground mt-1">
-                                        Email: <code className="bg-background px-1 rounded">admin@georgesclaude.ma</code>
+                                        Email de démonstration : <code className="bg-muted px-1 py-0.5 rounded">demo@NielsBohr.com</code>
                                     </p>
                                     <p className="text-muted-foreground">
                                         {t.admin.password}: <code className="bg-background px-1 rounded">demo123</code>
@@ -99,7 +99,7 @@ const AdminLogin = () => {
                                         type="email"
                                         value={email}
                                         onChange={(e) => setEmail(e.target.value)}
-                                        placeholder="admin@georgesclaude.ma"
+                                        placeholder="demo@NielsBohr.com"
                                         className="pl-10 rtl:pl-3 rtl:pr-10"
                                         required
                                     />

@@ -15,7 +15,7 @@ export const Footer = () => {
           viewport={{ once: true }}
           className="flex flex-col items-center text-center gap-6 text-white"
         >
-          <img src={logo} alt="Georges Claude Academy" className="h-20 w-auto" />
+          <img src={logo} alt="Groupe Scolaire Niels Bohr" className="h-20 w-auto" />
           <p className="text-white/80 max-w-md font-quicksand rtl:font-tajawal">
             {content.siteInfo.name} - {content.siteInfo.tagline}. Un avenir brillant pour vos enfants.
           </p>

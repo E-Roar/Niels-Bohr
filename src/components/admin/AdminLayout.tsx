@@ -60,14 +60,14 @@ const AdminLayout = () => {
             {/* Logo */}
             <div className={`p-4 border-b border-border ${sidebarCollapsed && !mobile ? 'px-2' : ''}`}>
                 <div className="flex items-center gap-3">
-                    <img src={logo} alt="Georges Claude Academy" className={`${sidebarCollapsed && !mobile ? 'h-10' : 'h-12'} w-auto`} />
+                    <img src={logo} alt="Groupe Scolaire Niels Bohr" className={`${sidebarCollapsed && !mobile ? 'h-10' : 'h-12'} w-auto`} />
                     {(!sidebarCollapsed || mobile) && (
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             className="flex-1 min-w-0"
                         >
-                            <p className="font-bold font-display text-sm truncate">Georges Claude Academy</p>
+                            <p className="font-bold font-display text-sm truncate">Groupe Scolaire Niels Bohr</p>
                             <p className="text-xs text-muted-foreground">{t.nav.admin}</p>
                         </motion.div>
                     )}
@@ -144,13 +144,13 @@ const AdminLayout = () => {
     );
 
     return (
-        <div className="min-h-screen bg-background flex" dir={direction}>
+        <div className="min-h-screen bg-soft-gradient light-neo-theme flex" dir={direction}>
             {/* Desktop Sidebar */}
             <motion.aside
                 initial={false}
                 animate={{ width: sidebarCollapsed ? 72 : 280 }}
                 transition={{ duration: 0.3, ease: 'easeInOut' }}
-                className={`hidden lg:flex flex-col bg-card shadow-neo fixed top-0 bottom-0 z-40 ${direction === 'rtl' ? 'right-0' : 'left-0'}`}
+                className={`hidden lg:flex flex-col bg-card/80 backdrop-blur-md shadow-neo fixed top-0 bottom-0 z-40 ${direction === 'rtl' ? 'right-0' : 'left-0'}`}
             >
                 <SidebarContent />
 
@@ -213,7 +213,7 @@ const AdminLayout = () => {
                 className={`flex-1 min-w-0 transition-all duration-300 overflow-y-auto`}
             >
                 {/* Demo Banner */}
-                <div className="bg-gradient-to-r from-melrose-yellow to-melrose-orange text-foreground px-4 py-2 sticky top-0 z-30 shadow-sm">
+                <div className="bg-accent/40 backdrop-blur-sm text-foreground border-b border-border px-4 py-2 sticky top-0 z-30 shadow-sm">
                     <div className="container mx-auto flex items-center justify-center gap-2 text-xs sm:text-sm font-medium">
                         <AlertTriangle className="w-4 h-4 shrink-0" />
                         <span className="truncate">🔔 {t.common.demoMode}</span>

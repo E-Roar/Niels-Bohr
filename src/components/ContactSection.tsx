@@ -36,7 +36,7 @@ export const ContactSection = () => {
     try {
       // Create WhatsApp message without manual encoding
       const text =
-        `👋 *Bonjour Georges Claude Academy !*\n\n` +
+        `👋 *Bonjour Groupe Scolaire Niels Bohr !*\n\n` +
         `📄 *Je souhaite faire une demande d'inscription :*\n\n` +
         `👤 *Parent :* ${formData.parentName}\n` +
         `👶 *Enfant :* ${formData.childName}\n` +
@@ -47,7 +47,7 @@ export const ContactSection = () => {
 
       // Use URLSearchParams for reliable encoding
       const params = new URLSearchParams();
-      params.set('phone', '212652561659');
+      params.set('phone', '212753117012');
       params.set('text', text);
 
       // Open WhatsApp with the message using the standard API endpoint
@@ -274,8 +274,8 @@ export const ContactSection = () => {
                 size="lg"
                 className="w-full mt-4 text-white shadow-none brightness-110"
                 onClick={() => {
-                  const text = `👋 *Bonjour Georges Claude Academy !* \uD83C\uDFEB\nJe souhaite avoir plus d'informations sur votre établissement.`;
-                  const params = new URLSearchParams({ phone: '212652561659', text });
+                  const text = `👋 *Bonjour Groupe Scolaire Niels Bohr !* \uD83C\uDFEB\nJe souhaite avoir plus d'informations sur votre établissement.`;
+                  const params = new URLSearchParams({ phone: '212753117012', text });
                   window.open(`https://api.whatsapp.com/send?${params.toString()}`, '_blank');
                 }}
               >

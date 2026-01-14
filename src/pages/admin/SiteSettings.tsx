@@ -81,7 +81,7 @@ const SiteSettings = () => {
                                     name="name"
                                     value={formData.name}
                                     onChange={handleChange}
-                                    placeholder="Georges Claude Private Academy"
+                                    placeholder="Groupe Scolaire Niels Bohr"
                                     className="h-12 rounded-xl bg-muted/20 border-border/50 focus:bg-background transition-all"
                                 />
                             </div>

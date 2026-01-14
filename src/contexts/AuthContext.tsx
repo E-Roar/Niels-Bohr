@@ -19,11 +19,11 @@ const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 // Mock credentials - will be replaced with Supabase later
 const MOCK_CREDENTIALS = {
-    email: 'admin@georgesclaude.ma',
+    email: 'demo@NielsBohr.com',
     password: 'demo123',
     user: {
-        email: 'admin@georgesclaude.ma',
-        name: 'Admin Georges Claude',
+        email: 'demo@NielsBohr.com',
+        name: 'Admin Niels Bohr',
         role: 'admin' as const,
     },
 };
