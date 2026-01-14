@@ -46,11 +46,15 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* Text - Mobile Order 2, Desktop Order 1 */}
         <div className="flex-1 text-center md:text-left flex justify-center md:justify-end order-2 md:order-1">
-          <p className="text-xl md:text-2xl text-white/95 font-semibold font-quicksand rtl:font-tajawal drop-shadow-md leading-relaxed max-w-lg">
-            {content.hero.subtitle}
-          </p>
+          <div className="glass-strong p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+            {/* Gradient overlay for extra depth */}
+            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none" />
+
+            <p className="text-xl md:text-2xl text-white/95 font-semibold font-quicksand rtl:font-tajawal drop-shadow-md leading-relaxed max-w-lg relative z-10">
+              {content.hero.subtitle}
+            </p>
+          </div>
         </div>
       </div>
 
