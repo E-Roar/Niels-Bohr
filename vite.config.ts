@@ -58,9 +58,9 @@ export default defineConfig(({ mode }) => ({
         ],
       },
       manifest: {
-        name: 'Georges Claude Academy',
-        short_name: 'GC Academy',
-        description: 'Georges Claude Academy - École privée à El Jadida',
+        name: 'Groupe Scolaire Niels Bohr',
+        short_name: 'Niels Bohr',
+        description: 'Groupe Scolaire Niels Bohr - École privée à El Jadida',
         theme_color: '#ffffff',
         background_color: '#ffffff',
         display: 'standalone',

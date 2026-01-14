@@ -66,9 +66,9 @@ export const PWAPrompt = () => {
                 transition={{ type: 'spring', damping: 20, stiffness: 300 }}
                 className="fixed bottom-6 left-4 right-4 md:left-auto md:right-6 md:w-[400px] z-[10000] light-neo-theme"
             >
-                <div className="bg-background/90 backdrop-blur-xl shadow-neo-lg rounded-3xl p-6 relative overflow-hidden ring-1 ring-border border border-white/50">
+                <div className="glass-card p-6 relative overflow-hidden">
                     {/* Soft gradient Overlay */}
-                    <div className="absolute inset-0 bg-soft-gradient opacity-50 pointer-events-none" />
+                    <div className="absolute inset-0 bg-transparent pointer-events-none" />
                     <div className="absolute -top-24 -right-24 w-48 h-48 bg-primary/5 blur-3xl rounded-full pointer-events-none" />
 
                     <button
@@ -80,8 +80,8 @@ export const PWAPrompt = () => {
                     </button>
 
                     <div className="flex items-start gap-5 relative z-0">
-                        <div className="w-20 h-20 rounded-2xl bg-white shadow-neo flex items-center justify-center p-3 shrink-0 border border-white">
-                            <img src={logo} alt="Academy Logo" className="w-full h-full object-contain" />
+                        <div className="w-20 h-20 flex items-center justify-center p-0 shrink-0">
+                            <img src={logo} alt="Academy Logo" className="w-full h-full object-contain drop-shadow-lg" />
                         </div>
                         <div className="flex-1 pt-1">
                             <h3 className="font-bold text-xl tracking-tight mb-2 text-foreground font-display">

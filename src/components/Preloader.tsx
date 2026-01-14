@@ -37,7 +37,7 @@ export const Preloader = () => {
           initial={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="fixed inset-0 z-[100] flex items-center justify-center animated-gradient-bg"
+          className="fixed inset-0 z-[100] flex items-center justify-center preloader-bg"
         >
           <div className="flex flex-col items-center gap-6">
             {/* Simplified animated logo */}
@@ -51,12 +51,12 @@ export const Preloader = () => {
               <motion.div
                 animate={{ y: [0, -8, 0] }}
                 transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                className="relative z-10 p-6 rounded-full shadow-neo-lg bg-background/80 backdrop-blur-sm"
+                className="relative z-10 p-6 rounded-full logo-gradient-bg"
               >
                 <img
                   src={logo}
-                  alt="Georges Claude Academy"
-                  className="w-28 h-28 md:w-36 md:h-36 object-contain"
+                  alt="Groupe Scolaire Niels Bohr"
+                  className="w-28 h-28 md:w-36 md:h-36 object-contain brightness-0 invert"
                 />
               </motion.div>
             </motion.div>
@@ -69,7 +69,7 @@ export const Preloader = () => {
               className="text-center"
             >
               <h2 className="text-xl md:text-2xl font-bold font-display gradient-text mb-1">
-                Georges Claude Academy
+                Groupe Scolaire Niels Bohr
               </h2>
               <p className="text-sm text-muted-foreground">Établissement Privé à El Jadida</p>
             </motion.div>

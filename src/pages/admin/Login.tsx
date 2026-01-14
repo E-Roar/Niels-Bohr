@@ -35,14 +35,14 @@ const AdminLogin = () => {
                         variant="ghost"
                         size="sm"
                         onClick={toggleLanguage}
-                        className="bg-background/80 backdrop-blur text-foreground"
+                        className="glass-card text-foreground hover:bg-white/20"
                         title={language === 'fr' ? 'Switch to Arabic' : 'Passer en Français'}
                     >
                         {language === 'fr' ? 'ع' : 'Fr'}
                     </Button>
                 </div>
 
-                <Card className="overflow-hidden">
+                <Card className="overflow-hidden glass-card shadow-none">
                     <div className="h-2 bg-gradient-to-r from-primary via-accent to-secondary" />
 
                     <CardHeader className="text-center pb-2">

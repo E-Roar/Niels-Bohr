@@ -7,7 +7,7 @@ const openrouter = new OpenAI({
   dangerouslyAllowBrowser: true,
   defaultHeaders: {
     'HTTP-Referer': typeof window !== 'undefined' ? window.location.href : '',
-    'X-Title': 'Georges Claude Academy',
+    'X-Title': 'Groupe Scolaire Niels Bohr',
   },
 });
 

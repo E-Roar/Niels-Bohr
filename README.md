@@ -1,10 +1,10 @@
-# Georges Claude Academy | El Jadida
+# Groupe Scolaire Niels Bohr | El Jadida
 
-This repository contains the source code for the official website of Georges Claude Academy, a private educational institution located in El Jadida, Morocco.
+This repository contains the source code for the official website of Groupe Scolaire Niels Bohr, a private educational institution located in El Jadida, Morocco.
 
 ## Project info
 
-**Official Website**: [georgesclaude.ma](https://georgesclaude.ma/)
+**Official Website**: [nielsbohr.ma](https://nielsbohr.ma/)
 
 ## Development and Deployment
 
@@ -49,4 +49,4 @@ The site is configured for deployment on Vercel. Ensure that `vercel.json` is pr
 - **Neomorphic UI**: Premium "Warm Brown/Bronze" matte design system.
 
 ---
-© 2025 Georges Claude Academy. All rights reserved.
+© 2026 Groupe Scolaire Niels Bohr. All rights reserved.

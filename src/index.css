@@ -6,131 +6,114 @@
 
 @layer base {
   :root {
-    /* Neomorphism Base Colors - Skyblue / White */
-    --background: 210 20% 98%;
-    /* Very light cool grey/white */
-    --foreground: 215 25% 27%;
-    /* Dark slate blue */
+    /* Sky Blue & White Theme */
+    --background: 210 50% 98%;
+    /* Alice Blue/White */
+    --foreground: 222 47% 11%;
+    /* Slate 900 */
 
-    /* Card surfaces matching background */
-    --card: 210 20% 98%;
-    --card-foreground: 215 25% 27%;
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 210 20% 98%;
-    --popover-foreground: 215 25% 27%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    /* Vibrant colorful palette */
-    --primary: 210 90% 50%;
-    /* Bright Blue */
-    --primary-foreground: 0 0% 100%;
+    /* Vibrant Blue Primary */
+    --primary: 215 90% 50%;
+    --primary-foreground: 210 40% 98%;
 
-    --secondary: 350 85% 60%;
-    /* Soft Red */
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
 
-    --muted: 210 20% 96%;
-    --muted-foreground: 215 15% 50%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 210 50% 95%;
-    --accent-foreground: 215 25% 27%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11.2%;
 
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
 
-    /* Additional vibrant colors */
-    --melrose-yellow: 45 100% 55%;
-    --melrose-red: 355 85% 55%;
-    --melrose-green: 140 70% 45%;
-    --melrose-blue: 195 85% 50%;
-    --melrose-purple: 280 70% 55%;
-    --melrose-orange: 25 95% 55%;
+    /* Additional vibrant colors - Refined */
+    --melrose-yellow: 45 100% 50%;
+    --melrose-red: 350 80% 50%;
+    --melrose-green: 150 60% 45%;
+    --melrose-blue: 215 90% 50%;
+    --melrose-purple: 260 60% 55%;
+    --melrose-orange: 25 90% 55%;
 
-    --border: 215 15% 90%;
-    --input: 215 15% 95%;
-    --ring: 210 90% 50%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 215 90% 50%;
 
     --radius: 1rem;
 
-    /* Neomorphism shadows - Soft Blue (No Brown) */
-    --neo-shadow-light: -6px -6px 14px 0px #FFFFFF;
-    --neo-shadow-dark: 6px 6px 14px 0px rgba(163, 177, 198, 0.4);
+    /* Neomorphism shadows - Sky Blue/Grey (No Brown) */
+    --neo-shadow-light: -8px -8px 16px 0px rgba(255, 255, 255, 0.8);
+    --neo-shadow-dark: 8px 8px 16px 0px rgba(174, 190, 205, 0.3);
+    /* Blue-grey shadow */
 
-    --neo-shadow-inset-light: inset -4px -4px 8px 0px #FFFFFF;
-    --neo-shadow-inset-dark: inset 4px 4px 8px 0px rgba(163, 177, 198, 0.4);
-
-    /* Large Shadows (Default) */
-    --neo-shadow-lg-light: -12px -12px 30px 0px #FFFFFF;
-    --neo-shadow-lg-dark: 12px 12px 30px 0px rgba(163, 177, 198, 0.45);
-
-    /* Small Shadows (Default) */
-    --neo-shadow-sm-light: -4px -4px 10px 0px #FFFFFF;
-    --neo-shadow-sm-dark: 4px 4px 10px 0px rgba(163, 177, 198, 0.45);
-
-    /* Hover Shadows (Default) */
-    --neo-shadow-light-hover: -8px -8px 20px 0px #FFFFFF;
-    --neo-shadow-dark-hover: 8px 8px 20px 0px rgba(163, 177, 198, 0.5);
+    --neo-shadow-inset-light: inset -4px -4px 8px 0px rgba(255, 255, 255, 0.8);
+    --neo-shadow-inset-dark: inset 4px 4px 8px 0px rgba(174, 190, 205, 0.3);
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.6);
-    --glass-border: rgba(255, 255, 255, 0.6);
+    --glass-bg: rgba(255, 255, 255, 0.1);
+    --glass-border: rgba(255, 255, 255, 0.3);
     --glass-blur: 20px;
 
-    /* Colorful glows - disabled */
-    --glow-purple: none;
-    --glow-blue: none;
-    --glow-pink: none;
-    --glow-yellow: none;
-
-    --sidebar-background: 0 0% 100%;
-    --sidebar-foreground: 215 25% 27%;
-    --sidebar-primary: 210 90% 50%;
+    /* Sidebar - keeping it clean */
+    --sidebar-background: 210 50% 98%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 215 90% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 210 50% 96%;
-    --sidebar-accent-foreground: 215 25% 27%;
-    --sidebar-border: 215 15% 90%;
-    --sidebar-ring: 210 90% 50%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 214 32% 91%;
+    --sidebar-ring: 215 90% 50%;
   }
 
   .dark {
-    --background: 215 25% 15%;
-    --foreground: 210 20% 98%;
+    /* Dark mode - Dark Slate Blue */
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
 
-    --card: 215 25% 15%;
-    --card-foreground: 210 20% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 215 25% 18%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 222 47% 11%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 210 90% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 215 90% 50%;
+    --primary-foreground: 222 47% 11%;
 
-    --secondary: 350 85% 60%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 217 33% 17%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 215 25% 25%;
-    --muted-foreground: 215 15% 70%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 215 25% 25%;
-    --accent-foreground: 210 20% 98%;
+    --accent: 217 33% 17%;
+    --accent-foreground: 210 40% 98%;
 
-    --destructive: 0 85% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 215 25% 25%;
-    --input: 215 25% 20%;
-    --ring: 210 90% 50%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 215 90% 50%;
 
-    --neo-shadow-light: -8px -8px 20px 0px rgba(255, 255, 255, 0.05);
+    --neo-shadow-light: -8px -8px 20px 0px rgba(30, 41, 59, 0.5);
     --neo-shadow-dark: 8px 8px 20px 0px rgba(0, 0, 0, 0.5);
 
-    --sidebar-background: 215 25% 12%;
-    --sidebar-foreground: 210 20% 98%;
-    --sidebar-primary: 210 90% 50%;
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 215 90% 50%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 215 25% 20%;
-    --sidebar-accent-foreground: 210 20% 98%;
-    --sidebar-border: 215 25% 20%;
-    --sidebar-ring: 210 90% 50%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 217 33% 17%;
+    --sidebar-ring: 215 90% 50%;
   }
 }
 
@@ -144,7 +127,7 @@
   }
 
   body {
-    @apply bg-transparent text-foreground font-sans;
+    @apply bg-background text-foreground font-sans;
     font-family: 'Nunito', sans-serif;
   }
 
@@ -356,11 +339,11 @@
   /* Animated gradient background */
   .animated-gradient-bg {
     background: linear-gradient(-45deg,
-        hsl(210 20% 98%),
-        hsl(210 60% 95%),
-        hsl(215 30% 92%),
-        hsl(210 50% 96%),
-        hsl(210 20% 98%));
+        hsl(28 45% 55%),
+        hsl(32 50% 60%),
+        hsl(25 50% 50%),
+        hsl(30 45% 58%),
+        hsl(28 45% 55%));
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
   }
@@ -377,6 +360,35 @@
     100% {
       background-position: 0% 50%;
     }
+  }
+
+  /* Specific Preloader Gradient - Darker Sky Blue */
+  .preloader-bg {
+    background: linear-gradient(135deg,
+        hsl(210 80% 96%),
+        hsl(215 70% 92%),
+        hsl(210 80% 94%));
+    background-size: 200% 200%;
+    animation: gradientShift 10s ease infinite;
+  }
+
+  /* Sky Blue Gradient for Logo Container */
+  .logo-gradient-bg {
+    background: linear-gradient(135deg, hsl(195 90% 70%), hsl(210 90% 65%));
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.1);
+  }
+
+  /* Unified Glass Card Style (Transparent - No White Tone) */
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow:
+      0 8px 32px 0 rgba(31, 38, 135, 0.1),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.1) !important;
+    border-radius: 1.5rem;
+    /* rounded-3xl */
   }
 
   /* 3D perspective for carousel */

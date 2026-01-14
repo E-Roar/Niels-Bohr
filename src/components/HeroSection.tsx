@@ -2,7 +2,8 @@ import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 import { ArrowRight, Sparkles } from 'lucide-react';
-import TiltLogo from '@/components/TiltLogo';
+import AtomWrapper from '@/components/AtomWrapper';
+import logo from '@/assets/logo.png';
 import { useSiteContent } from '@/contexts/SiteContext';
 
 const HeroSection = () => {
@@ -14,9 +15,9 @@ const HeroSection = () => {
 
       {/* 1. Main Title - Top Centered */}
       <div className="relative z-20 mb-8 w-full text-center">
-        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/20 backdrop-blur-md border border-white/30 shadow-sm mb-6">
+        <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full glass-card mb-6">
           <Sparkles className="w-5 h-5 text-melrose-yellow animate-pulse" />
-          <span className="text-sm font-bold text-white tracking-wide uppercase">{content.hero.bannerText}</span>
+          <span className="text-sm font-bold text-foreground tracking-wide uppercase">{content.hero.bannerText}</span>
         </div>
         <h1 className="text-5xl md:text-8xl lg:text-9xl font-display font-black leading-tight tracking-tight drop-shadow-xl">
           <span className="block text-white/90" style={{ textShadow: '0 4px 20px rgba(0,0,0,0.1)' }}>
@@ -42,16 +43,18 @@ const HeroSection = () => {
         {/* Logo - Mobile Order 1, Desktop Order 2 */}
         <div className="flex-1 flex justify-center md:justify-start order-1 md:order-2">
           <div className="transform scale-[0.9] sm:scale-75 md:scale-100 origin-center md:origin-left">
-            <TiltLogo />
+            <AtomWrapper size="lg">
+              <img src={logo} alt="School Logo" className="w-[60%] h-[60%] object-contain drop-shadow-2xl relative z-10" />
+            </AtomWrapper>
           </div>
         </div>
 
         <div className="flex-1 text-center md:text-left flex justify-center md:justify-end order-2 md:order-1">
-          <div className="glass-strong p-8 rounded-3xl relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
+          <div className="glass-card p-8 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300">
             {/* Gradient overlay for extra depth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-50 pointer-events-none" />
+            <div className="absolute inset-0 bg-transparent pointer-events-none" />
 
-            <p className="text-xl md:text-2xl text-white/95 font-semibold font-quicksand rtl:font-tajawal drop-shadow-md leading-relaxed max-w-lg relative z-10">
+            <p className="text-xl md:text-2xl text-foreground font-semibold font-quicksand rtl:font-tajawal leading-relaxed max-w-lg relative z-10">
               {content.hero.subtitle}
             </p>
           </div>
