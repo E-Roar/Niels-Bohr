@@ -37,14 +37,14 @@ const HeroSettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-6 border-b border-border/50">
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold font-display flex items-center gap-3">
-                        <Home className="w-8 h-8 sm:w-10 sm:h-10 text-melrose-blue shadow-glow-blue/20" />
+                        <Home className="w-8 h-8 sm:w-10 sm:h-10 text-bohr-blue shadow-glow-blue/20" />
                         Section Accueil (Hero)
                     </h1>
                     <p className="text-muted-foreground mt-2 text-lg">
                         Personnalisez la première section visible de votre site
                     </p>
                 </div>
-                <Button variant="gradient" onClick={handleSave} className="h-11 px-8 rounded-xl shadow-lg shadow-melrose-blue/20 font-bold w-full sm:w-auto">
+                <Button variant="gradient" onClick={handleSave} className="h-11 px-8 rounded-xl shadow-lg shadow-bohr-blue/20 font-bold w-full sm:w-auto">
                     <Save className="w-4 h-4 mr-2" />
                     Sauvegarder
                 </Button>
@@ -59,7 +59,7 @@ const HeroSettings = () => {
                     <Card className="border-border/50 shadow-sm overflow-hidden h-full">
                         <CardHeader className="bg-muted/30 border-b border-border/30">
                             <CardTitle className="flex items-center gap-2 text-xl">
-                                <Sparkles className="w-5 h-5 text-melrose-blue" />
+                                <Sparkles className="w-5 h-5 text-bohr-blue" />
                                 Contenu principal
                             </CardTitle>
                             <CardDescription>
@@ -160,7 +160,7 @@ const HeroSettings = () => {
                     <Card className="border-border/50 shadow-sm overflow-hidden">
                         <CardHeader className="bg-muted/30 border-b border-border/30">
                             <CardTitle className="flex items-center gap-2 text-xl">
-                                <TrendingUp className="w-5 h-5 text-melrose-purple" />
+                                <TrendingUp className="w-5 h-5 text-bohr-purple" />
                                 Statistiques
                             </CardTitle>
                             <CardDescription>
@@ -177,7 +177,7 @@ const HeroSettings = () => {
                                                 value={stat.value}
                                                 onChange={(e) => handleStatChange(index, 'value', e.target.value)}
                                                 placeholder="15+"
-                                                className="h-12 rounded-xl bg-background border-border/50 font-black text-lg text-melrose-purple"
+                                                className="h-12 rounded-xl bg-background border-border/50 font-black text-lg text-bohr-purple"
                                             />
                                         </div>
                                         <div className="space-y-2">

@@ -54,7 +54,7 @@ export const Chatbot = () => {
     if (typeof window === 'undefined') return;
 
     try {
-      const stored = window.localStorage.getItem('melrose_chat_messages');
+      const stored = window.localStorage.getItem('bohr_chat_messages');
       if (stored) {
         const parsed = JSON.parse(stored) as Message[];
         if (Array.isArray(parsed) && parsed.length > 0) {
@@ -74,7 +74,7 @@ export const Chatbot = () => {
   useEffect(() => {
     if (typeof window === 'undefined') return;
     try {
-      window.localStorage.setItem('melrose_chat_messages', JSON.stringify(messages));
+      window.localStorage.setItem('bohr_chat_messages', JSON.stringify(messages));
     } catch {
       // ignore storage errors
     }
@@ -227,10 +227,10 @@ export const Chatbot = () => {
         animate={{ scale: 1 }}
         transition={{ delay: 1, type: 'spring' }}
         onClick={() => setIsOpen(true)}
-        className="fixed bottom-6 right-6 z-[100] w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl glass-high border border-white/40 p-0 hover:scale-110 transition-all flex items-center justify-center group"
+        className="fixed bottom-6 right-6 z-[100] w-16 h-16 md:w-20 md:h-20 rounded-full shadow-2xl glass-card border-white/40 p-0 hover:scale-110 transition-all flex items-center justify-center group"
         aria-label="Open chat"
       >
-        <Bot className="w-8 h-8 md:w-10 md:h-10 text-white group-hover:animate-pulse" />
+        <Bot className="w-8 h-8 md:w-10 md:h-10 text-slate-800 group-hover:animate-pulse" />
         <div className="absolute -top-1 -right-1 w-4 h-4 md:w-5 md:h-5 bg-green-500 rounded-full border-2 border-white animate-pulse" />
       </motion.button>
 
@@ -243,17 +243,17 @@ export const Chatbot = () => {
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
             className="fixed bottom-24 right-6 z-[100] w-[350px] max-w-[calc(100vw-2rem)]"
           >
-            <Card variant="glass" className="overflow-hidden glass-strong border-white/30 shadow-xl ring-0">
+            <Card variant="glass" className="overflow-hidden glass-strong border-slate-200/50 shadow-xl ring-0 border-0">
               {/* Header */}
-              <div className="p-4 bg-white/10 backdrop-blur-xl flex items-center gap-3 border-b border-white/20">
+              <div className="p-4 bg-white/40 backdrop-blur-xl flex items-center gap-3 border-b border-slate-200/30">
                 <div className="relative">
-                  <div className="w-12 h-12 rounded-full border-2 border-white/40 glass-mid flex items-center justify-center shadow-md">
-                    <Bot className="w-6 h-6 text-white" />
+                  <div className="w-12 h-12 rounded-full border-2 border-white/40 glass-card flex items-center justify-center shadow-md">
+                    <Bot className="w-6 h-6 text-slate-800" />
                   </div>
                   <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-white shadow-sm" />
                 </div>
-                <div className="flex-1 text-white">
-                  <p className="font-bold drop-shadow-sm">{chatbot.name}</p>
+                <div className="flex-1 text-slate-900">
+                  <p className="font-bold">{chatbot.name}</p>
                   <p className="text-[10px] uppercase font-bold tracking-wider opacity-80 flex items-center gap-1.5">
                     <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse shadow-[0_0_8px_rgba(74,222,128,0.5)]" />
                     {language === 'fr' ? 'En ligne' : 'متصل'}
@@ -266,7 +266,7 @@ export const Chatbot = () => {
                     variant="ghost"
                     size="icon"
                     onClick={toggleMute}
-                    className="text-white hover:bg-white/20 mr-1 rounded-full w-9 h-9"
+                    className="text-slate-700 hover:bg-slate-200/50 mr-1 rounded-full w-9 h-9"
                     title={isMuted ? "Activer le son" : "Désactiver le son"}
                   >
                     {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
@@ -277,7 +277,7 @@ export const Chatbot = () => {
                   variant="ghost"
                   size="icon"
                   onClick={() => setIsOpen(false)}
-                  className="text-white hover:bg-white/20 rounded-full w-9 h-9"
+                  className="text-slate-700 hover:bg-slate-200/50 rounded-full w-9 h-9"
                   aria-label="Close chat"
                 >
                   <X className="w-5 h-5" />
@@ -285,23 +285,23 @@ export const Chatbot = () => {
               </div>
 
               {/* Quick Actions */}
-              <div className="p-3 bg-white/5 backdrop-blur-md border-b border-white/10">
-                <p className="text-[10px] text-white/60 font-bold uppercase tracking-widest mb-2 px-1">
+              <div className="p-3 bg-white/20 backdrop-blur-md border-b border-slate-200/20">
+                <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest mb-2 px-1">
                   {language === 'fr' ? 'Actions rapides' : 'إجراءات سريعة'}
                 </p>
                 <div className="grid grid-cols-4 gap-2">
                   {quickActions.map((action, idx) => (
                     <motion.button
                       key={idx}
-                      whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.15)' }}
+                      whileHover={{ scale: 1.05, backgroundColor: 'rgba(255,255,255,0.4)' }}
                       whileTap={{ scale: 0.95 }}
                       onClick={() => handleQuickAction(action.prompt)}
-                      className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl bg-white/10 border border-white/10 transition-all min-h-[55px] shadow-none"
+                      className="flex flex-col items-center justify-center gap-1 p-2 rounded-xl bg-white/20 border border-slate-200/30 transition-all min-h-[55px] shadow-none"
                     >
                       {action.icon && (
-                        <action.icon className="w-5 h-5 text-white" />
+                        <action.icon className="w-5 h-5 text-slate-700" />
                       )}
-                      <span className="text-[10px] font-bold text-center leading-tight text-white/90 uppercase px-0.5">{action.label}</span>
+                      <span className="text-[10px] font-bold text-center leading-tight text-slate-700 uppercase px-0.5">{action.label}</span>
                     </motion.button>
                   ))}
                 </div>
@@ -317,12 +317,12 @@ export const Chatbot = () => {
                     className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
                   >
                     <div className={`max-w-[85%] p-3 rounded-2xl text-sm ${msg.role === 'user'
-                      ? 'bg-melrose-purple text-white rounded-br-none rtl:rounded-bl-none rtl:rounded-br-2xl shadow-sm border border-white/10'
-                      : 'glass-mid border border-white/20 text-white rounded-bl-none rtl:rounded-br-none rtl:rounded-bl-2xl shadow-sm'
+                      ? 'bg-gradient-to-tr from-bohr-blue to-bohr-purple text-white rounded-br-none rtl:rounded-bl-none rtl:rounded-br-2xl shadow-md border-0'
+                      : 'glass-card border-0 text-slate-800 rounded-bl-none rtl:rounded-br-none rtl:rounded-bl-2xl shadow-sm'
                       } font-quicksand rtl:font-tajawal ripple`}>
                       {msg.toolCall && (
-                        <div className="flex items-center gap-1 text-[10px] font-bold uppercase opacity-70 mb-1 text-white">
-                          <Sparkles className="w-3 h-3 text-white" />
+                        <div className="flex items-center gap-1 text-[10px] font-bold uppercase opacity-70 mb-1 text-slate-500">
+                          <Sparkles className="w-3 h-3 text-bohr-blue" />
                           <span>
                             {msg.toolCall === 'scrollToSection'
                               ? (language === 'fr' ? 'Navigation' : 'تنقل')
@@ -341,7 +341,7 @@ export const Chatbot = () => {
                     animate={{ opacity: 1 }}
                     className="flex justify-start"
                   >
-                    <div className="glass-mid border border-white/20 p-3 rounded-2xl rounded-bl-none rtl:rounded-br-none rtl:rounded-bl-2xl shadow-sm">
+                    <div className="glass-card border-0 p-3 rounded-2xl rounded-bl-none rtl:rounded-br-none rtl:rounded-bl-2xl shadow-sm">
                       <div className="flex gap-1.5 px-1">
                         {[0, 1, 2].map((i) => (
                           <motion.div
@@ -353,7 +353,7 @@ export const Chatbot = () => {
                               delay: i * 0.15,
                               ease: 'easeInOut',
                             }}
-                            className="w-1.5 h-1.5 rounded-full bg-white"
+                            className="w-1.5 h-1.5 rounded-full bg-slate-400"
                           />
                         ))}
                       </div>
@@ -370,14 +370,14 @@ export const Chatbot = () => {
                   onChange={(e) => setInput(e.target.value)}
                   onKeyPress={(e) => e.key === 'Enter' && !e.shiftKey && handleSend()}
                   placeholder={language === 'fr' ? 'Votre message...' : 'رسالتك...'}
-                  className="flex-1 h-11 font-quicksand rtl:font-tajawal bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:bg-white/5 focus:border-white/30 transition-colors rounded-xl shadow-none"
+                  className="flex-1 h-11 font-quicksand rtl:font-tajawal bg-white/20 border-slate-200/50 text-slate-800 placeholder:text-slate-400 focus:bg-white/30 focus:border-bohr-blue transition-colors rounded-xl shadow-none"
                   disabled={isLoading}
                 />
                 <Button
                   variant="gradient"
                   size="icon"
                   onClick={handleSend}
-                  className="h-11 w-11 rounded-xl shadow-none brightness-110"
+                  className="h-11 w-11 rounded-xl shadow-lg brightness-110"
                   disabled={isLoading || !input.trim()}
                   aria-label="Send message"
                 >

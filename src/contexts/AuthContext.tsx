@@ -28,7 +28,7 @@ const MOCK_CREDENTIALS = {
     },
 };
 
-const AUTH_STORAGE_KEY = 'melrose_auth_user';
+const AUTH_STORAGE_KEY = 'bohr_auth_user';
 
 export const AuthProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [user, setUser] = useState<User | null>(null);
@@ -102,7 +102,7 @@ export const ProtectedRoute: React.FC<{ children: ReactNode }> = ({ children }) 
         return (
             <div className="min-h-screen flex items-center justify-center bg-background">
                 <div className="text-center">
-                    <div className="w-12 h-12 border-4 border-melrose-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" />
+                    <div className="w-12 h-12 border-4 border-bohr-purple border-t-transparent rounded-full animate-spin mx-auto mb-4" />
                     <p className="text-muted-foreground">Chargement...</p>
                 </div>
             </div>

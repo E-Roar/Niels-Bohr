@@ -27,11 +27,11 @@ export const GallerySection = () => {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6 }}
           >
-            <div className="bg-white/5 rounded-[2rem] p-6 border border-white/20 backdrop-blur-md inline-block shadow-none">
-              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-white drop-shadow-lg">
-                {gallery.title} <span className="gradient-text brightness-150">{gallery.highlight}</span>
+            <div className="glass-card p-6 inline-block shadow-none">
+              <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+                {gallery.title} <span className="gradient-text">{gallery.highlight}</span>
               </h2>
-              <p className="text-lg text-white/90 font-quicksand rtl:font-tajawal drop-shadow-md">
+              <p className="text-lg font-quicksand rtl:font-tajawal">
                 {gallery.subtitle}
               </p>
             </div>
@@ -113,7 +113,7 @@ export const GallerySection = () => {
           >
             {gallery.images.map((image) => (
               <SwiperSlide key={image.id} className="w-[300px] sm:w-[400px]">
-                <div className="relative group rounded-[2rem] overflow-hidden bg-white/5 backdrop-blur-md aspect-[4/3] border border-white/20 shadow-none">
+                <div className="relative group rounded-[2rem] overflow-hidden glass-card aspect-[4/3] shadow-none border-0">
                   <img
                     src={image.src}
                     alt={image.title}

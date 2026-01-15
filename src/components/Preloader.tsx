@@ -1,12 +1,22 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import logo from '@/assets/logo.png';
+import { onVideoReady } from './GlobalParallaxBackground';
+import { useSiteContent } from '@/contexts/SiteContext';
 
 export const Preloader = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [canSkip, setCanSkip] = useState(false);
+  const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+  const [minDelayPassed, setMinDelayPassed] = useState(false);
+  const { content } = useSiteContent();
 
   useEffect(() => {
+    // Subscribe to video ready callback
+    onVideoReady((ready) => {
+      if (ready) setIsVideoLoaded(true);
+    });
+
     // Detect connection speed
     const connection = (navigator as any).connection;
     const isSlowConnection = connection?.effectiveType === 'slow-2g' || connection?.effectiveType === '2g';
@@ -15,16 +25,23 @@ export const Preloader = () => {
     // Show skip button after delay
     const showSkipTimer = setTimeout(() => setCanSkip(true), delay);
 
-    // Hide preloader
-    const hideTimer = setTimeout(() => {
-      setIsLoading(false);
+    // Mark minimum delay as passed
+    const delayTimer = setTimeout(() => {
+      setMinDelayPassed(true);
     }, delay + 500);
 
     return () => {
       clearTimeout(showSkipTimer);
-      clearTimeout(hideTimer);
+      clearTimeout(delayTimer);
     };
   }, []);
+
+  // Hide preloader when both conditions are met
+  useEffect(() => {
+    if (minDelayPassed && isVideoLoaded) {
+      setIsLoading(false);
+    }
+  }, [minDelayPassed, isVideoLoaded]);
 
   const skipPreloader = () => {
     setIsLoading(false);
@@ -69,9 +86,9 @@ export const Preloader = () => {
               className="text-center"
             >
               <h2 className="text-xl md:text-2xl font-bold font-display gradient-text mb-1">
-                Groupe Scolaire Niels Bohr
+                {content.siteInfo.name}
               </h2>
-              <p className="text-sm text-muted-foreground">Établissement Privé à El Jadida</p>
+              <p className="text-sm text-muted-foreground">{content.siteInfo.tagline}</p>
             </motion.div>
 
             {/* Loading dots - simplified */}
@@ -86,7 +103,7 @@ export const Preloader = () => {
                     delay: i * 0.12,
                     ease: 'easeInOut',
                   }}
-                  className="w-2 h-2 rounded-full bg-gradient-to-r from-melrose-purple to-melrose-blue"
+                  className="w-2 h-2 rounded-full bg-gradient-to-r from-bohr-purple to-bohr-blue"
                 />
               ))}
             </div>

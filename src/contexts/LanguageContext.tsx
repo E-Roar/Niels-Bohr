@@ -11,7 +11,7 @@ interface LanguageContextType {
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
-const LANG_STORAGE_KEY = 'melrose_language';
+const LANG_STORAGE_KEY = 'bohr_language';
 
 export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [language, setLanguageState] = useState<Language>(() => {

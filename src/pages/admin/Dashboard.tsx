@@ -21,13 +21,13 @@ const Dashboard = () => {
     const { t } = useLanguage();
 
     const quickLinks = [
-        { label: t.admin.siteSettings, href: '/admin/site', icon: Settings, color: 'melrose-purple' },
-        { label: t.admin.hero, href: '/admin/hero', icon: Home, color: 'melrose-blue' },
-        { label: t.admin.about, href: '/admin/about', icon: Users, color: 'melrose-green' },
-        { label: t.admin.programs, href: '/admin/programs', icon: GraduationCap, color: 'melrose-yellow' },
-        { label: t.admin.gallery, href: '/admin/gallery', icon: Image, color: 'melrose-red' },
-        { label: t.admin.contact, href: '/admin/contact', icon: Phone, color: 'melrose-orange' },
-        { label: t.admin.chatbot, href: '/admin/chatbot', icon: MessageCircle, color: 'melrose-purple' },
+        { label: t.admin.siteSettings, href: '/admin/site', icon: Settings, color: 'bohr-purple' },
+        { label: t.admin.hero, href: '/admin/hero', icon: Home, color: 'bohr-blue' },
+        { label: t.admin.about, href: '/admin/about', icon: Users, color: 'bohr-green' },
+        { label: t.admin.programs, href: '/admin/programs', icon: GraduationCap, color: 'bohr-yellow' },
+        { label: t.admin.gallery, href: '/admin/gallery', icon: Image, color: 'bohr-red' },
+        { label: t.admin.contact, href: '/admin/contact', icon: Phone, color: 'bohr-orange' },
+        { label: t.admin.chatbot, href: '/admin/chatbot', icon: MessageCircle, color: 'bohr-purple' },
     ];
 
     return (
@@ -54,7 +54,7 @@ const Dashboard = () => {
             <Card className="overflow-hidden">
                 <CardHeader className="pb-3 border-b border-border/50 bg-muted/20">
                     <CardTitle className="flex items-center gap-2 text-xl font-display">
-                        <Settings className="w-5 h-5 text-melrose-purple" />
+                        <Settings className="w-5 h-5 text-bohr-purple" />
                         {t.admin.siteSettings}
                     </CardTitle>
                 </CardHeader>
@@ -100,7 +100,7 @@ const Dashboard = () => {
                                             <item.icon className={`w-6 h-6 text-${item.color}`} />
                                         </div>
                                         <h3 className="font-bold text-lg leading-tight">{item.label}</h3>
-                                        <div className="flex items-center gap-2 mt-4 text-xs font-bold uppercase tracking-widest text-melrose-purple py-2 px-3 bg-melrose-purple/5 rounded-lg w-fit transition-colors group-hover:bg-melrose-purple/10">
+                                        <div className="flex items-center gap-2 mt-4 text-xs font-bold uppercase tracking-widest text-bohr-purple py-2 px-3 bg-bohr-purple/5 rounded-lg w-fit transition-colors group-hover:bg-bohr-purple/10">
                                             <Edit className="w-3.5 h-3.5" />
                                             {t.common.edit}
                                         </div>

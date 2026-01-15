@@ -37,7 +37,7 @@ const AboutSettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
                     <h1 className="text-3xl font-bold font-display flex items-center gap-3">
-                        <Users className="w-8 h-8 text-melrose-green" />
+                        <Users className="w-8 h-8 text-bohr-green" />
                         Section À Propos
                     </h1>
                     <p className="text-muted-foreground mt-1">

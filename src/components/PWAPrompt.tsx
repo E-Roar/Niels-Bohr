@@ -113,7 +113,7 @@ export const PWAPrompt = () => {
                                 <Button
                                     variant="gradient"
                                     onClick={handleInstallClick}
-                                    className="flex-1 h-12 rounded-xl shadow-xl shadow-melrose-purple/20 transition-all hover:scale-[1.02] active:scale-[0.98] font-bold text-base"
+                                    className="flex-1 h-12 rounded-xl shadow-xl shadow-bohr-purple/20 transition-all hover:scale-[1.02] active:scale-[0.98] font-bold text-base"
                                 >
                                     <Download className="w-5 h-5 mr-2" />
                                     Installer

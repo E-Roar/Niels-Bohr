@@ -37,14 +37,14 @@ const ProgramsSettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-6 border-b border-border/50">
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold font-display flex items-center gap-3">
-                        <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-melrose-yellow shadow-glow-yellow/20" />
+                        <GraduationCap className="w-8 h-8 sm:w-10 sm:h-10 text-bohr-yellow shadow-glow-yellow/20" />
                         Section Programmes
                     </h1>
                     <p className="text-muted-foreground mt-2 text-lg">
                         Gérez vos programmes éducatifs
                     </p>
                 </div>
-                <Button variant="gradient" onClick={handleSave} className="h-11 px-8 rounded-xl shadow-lg shadow-melrose-yellow/20 font-bold w-full sm:w-auto">
+                <Button variant="gradient" onClick={handleSave} className="h-11 px-8 rounded-xl shadow-lg shadow-bohr-yellow/20 font-bold w-full sm:w-auto">
                     <Save className="w-4 h-4 mr-2" />
                     Sauvegarder
                 </Button>
@@ -115,7 +115,7 @@ const ProgramsSettings = () => {
                         <Card className="border-border/50 shadow-sm overflow-hidden h-full">
                             <CardHeader className="bg-muted/30 border-b border-border/30">
                                 <CardTitle className="text-xl font-display">{program.title || `Programme ${index + 1}`}</CardTitle>
-                                <CardDescription className="text-melrose-purple font-bold">
+                                <CardDescription className="text-bohr-purple font-bold">
                                     Tranche d'âge: {program.age}
                                 </CardDescription>
                             </CardHeader>

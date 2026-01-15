@@ -36,12 +36,12 @@
     --destructive-foreground: 210 40% 98%;
 
     /* Additional vibrant colors - Refined */
-    --melrose-yellow: 45 100% 50%;
-    --melrose-red: 350 80% 50%;
-    --melrose-green: 150 60% 45%;
-    --melrose-blue: 215 90% 50%;
-    --melrose-purple: 260 60% 55%;
-    --melrose-orange: 25 90% 55%;
+    --bohr-yellow: 45 100% 50%;
+    --bohr-red: 350 80% 50%;
+    --bohr-green: 150 60% 45%;
+    --bohr-blue: 215 90% 50%;
+    --bohr-purple: 260 60% 55%;
+    --bohr-orange: 25 90% 55%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
@@ -49,13 +49,13 @@
 
     --radius: 1rem;
 
-    /* Neomorphism shadows - Sky Blue/Grey (No Brown) */
-    --neo-shadow-light: -8px -8px 16px 0px rgba(255, 255, 255, 0.8);
-    --neo-shadow-dark: 8px 8px 16px 0px rgba(174, 190, 205, 0.3);
-    /* Blue-grey shadow */
+    /* Neomorphism shadows - Enhanced Light Blue with Strong 3D Effect */
+    --neo-shadow-light: -10px -10px 20px 0px rgba(255, 255, 255, 0.95);
+    --neo-shadow-dark: 10px 10px 20px 0px rgba(147, 180, 220, 0.5);
+    /* Stronger blue-grey shadow for 3D depth */
 
-    --neo-shadow-inset-light: inset -4px -4px 8px 0px rgba(255, 255, 255, 0.8);
-    --neo-shadow-inset-dark: inset 4px 4px 8px 0px rgba(174, 190, 205, 0.3);
+    --neo-shadow-inset-light: inset -6px -6px 12px 0px rgba(255, 255, 255, 0.9);
+    --neo-shadow-inset-dark: inset 6px 6px 12px 0px rgba(147, 180, 220, 0.45);
 
     /* Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.1);
@@ -186,7 +186,7 @@
       -webkit-backdrop-filter: blur(10px) !important;
     }
 
-    /* Simplify shadows on mobile - Keep brown consistency */
+    /* Simplify shadows on mobile - Keep design consistency */
     .shadow-neo-lg {
       box-shadow: var(--neo-shadow-light), var(--neo-shadow-dark) !important;
     }
@@ -222,8 +222,8 @@
 
   .neo-raised:hover {
     box-shadow:
-      -10px -10px 25px 0px hsl(32 50% 65% / 0.6),
-      10px 10px 25px 0px hsl(20 50% 35% / 0.7);
+      -10px -10px 25px 0px rgba(255, 255, 255, 0.95),
+      10px 10px 25px 0px rgba(147, 180, 220, 0.6);
     transform: translateY(-2px);
   }
 
@@ -240,12 +240,13 @@
 
   .neo-button:hover {
     box-shadow:
-      -6px -6px 16px 0px hsl(32 50% 65% / 0.6),
-      6px 6px 16px 0px hsl(20 50% 35% / 0.7);
+      -6px -6px 16px 0px rgba(255, 255, 255, 0.95),
+      6px 6px 16px 0px rgba(147, 180, 220, 0.55);
   }
 
   .neo-button:active {
     box-shadow: var(--neo-shadow-inset-light), var(--neo-shadow-inset-dark);
+    transform: translateY(0);
   }
 
   /* Glassmorphism styles */
@@ -270,34 +271,39 @@
     border: 1px solid hsl(0 0% 100% / 0.4);
   }
 
-  /* Force white text on frosted glass components */
+  /* Force dark blue text on frosted glass components */
   .glass,
   .glass-mid,
   .glass-high,
-  .glass-strong {
-    @apply text-white;
+  .glass-strong,
+  .glass-card {
+    @apply text-slate-900;
   }
 
   .glass p,
   .glass-mid p,
   .glass-high p,
-  .glass-strong p {
-    @apply text-white/90;
+  .glass-strong p,
+  .glass-card p {
+    @apply text-slate-800;
   }
 
   .glass h1,
   .glass-mid h1,
   .glass-high h1,
   .glass-strong h1,
+  .glass-card h1,
   .glass h2,
   .glass-mid h2,
   .glass-high h2,
   .glass-strong h2,
+  .glass-card h2,
   .glass h3,
   .glass-mid h3,
   .glass-high h3,
-  .glass-strong h3 {
-    @apply text-white drop-shadow-md;
+  .glass-strong h3,
+  .glass-card h3 {
+    @apply text-slate-900;
   }
 
 
@@ -339,11 +345,10 @@
   /* Animated gradient background */
   .animated-gradient-bg {
     background: linear-gradient(-45deg,
-        hsl(28 45% 55%),
-        hsl(32 50% 60%),
-        hsl(25 50% 50%),
-        hsl(30 45% 58%),
-        hsl(28 45% 55%));
+        hsl(210 50% 98%),
+        hsl(215 60% 95%),
+        hsl(210 70% 92%),
+        hsl(215 50% 98%));
     background-size: 400% 400%;
     animation: gradientShift 15s ease infinite;
   }
@@ -502,5 +507,19 @@
       opacity: 1;
       transform: translateY(0);
     }
+  }
+
+  /* Theme & Background Utilities */
+  .bg-soft-gradient {
+    background: linear-gradient(135deg, #f0f4f9 0%, #e6eef5 100%);
+  }
+
+  .light-neo-theme {
+    --background: 210 40% 96%;
+    --foreground: 222 47% 11%;
+    --card: 210 40% 96%;
+    --card-foreground: 222 47% 11%;
+    --neo-shadow-light: -8px -8px 16px 0px rgba(255, 255, 255, 0.9);
+    --neo-shadow-dark: 8px 8px 16px 0px rgba(147, 180, 220, 0.45);
   }
 }

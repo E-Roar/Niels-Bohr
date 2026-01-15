@@ -51,13 +51,13 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        melrose: {
-          yellow: "hsl(var(--melrose-yellow))",
-          red: "hsl(var(--melrose-red))",
-          green: "hsl(var(--melrose-green))",
-          blue: "hsl(var(--melrose-blue))",
-          purple: "hsl(var(--melrose-purple))",
-          orange: "hsl(var(--melrose-orange))",
+        bohr: {
+          yellow: "hsl(var(--bohr-yellow))",
+          red: "hsl(var(--bohr-red))",
+          green: "hsl(var(--bohr-green))",
+          blue: "hsl(var(--bohr-blue))",
+          purple: "hsl(var(--bohr-purple))",
+          orange: "hsl(var(--bohr-orange))",
         },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",

@@ -4,6 +4,7 @@ import { Menu, X, Lock, Languages, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useSmoothScroll } from '@/hooks/use-smooth-scroll';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useSiteContent } from '@/contexts/SiteContext';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo.png';
 
@@ -12,6 +13,7 @@ export const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollToSection: smoothScroll } = useSmoothScroll();
   const { t, language, toggleLanguage, direction } = useLanguage();
+  const { content } = useSiteContent();
 
   const navItems = [
     { label: t.nav.home, href: '#accueil' },
@@ -56,7 +58,7 @@ export const Navbar = () => {
             whileTap={{ scale: 0.95 }}
             className="absolute top-2 left-4 z-50 flex items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-full glass-mid border border-white/20 shadow-lg p-2"
           >
-            <img src={logo} alt="Groupe Scolaire Niels Bohr" className="w-full h-full object-contain" />
+            <img src={logo} alt={content.siteInfo.name} className="w-full h-full object-contain" />
           </motion.a>
 
           {/* Spacer to push nav items right since logo is absolute */}
@@ -95,7 +97,7 @@ export const Navbar = () => {
               <Button
                 variant="outline"
                 size="icon"
-                className="ml-2 w-10 h-10 rounded-full text-melrose-purple hover:text-melrose-purple/80"
+                className="ml-2 w-10 h-10 rounded-full text-bohr-purple hover:text-bohr-purple/80"
                 title={t.nav.admin}
               >
                 <Lock size={18} />

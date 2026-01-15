@@ -60,7 +60,7 @@ const GallerySettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-6 border-b border-border/50">
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold font-display flex items-center gap-3">
-                        <Image className="w-8 h-8 sm:w-10 sm:h-10 text-melrose-red shadow-glow-red/20" />
+                        <Image className="w-8 h-8 sm:w-10 sm:h-10 text-bohr-red shadow-glow-red/20" />
                         Galerie
                     </h1>
                     <p className="text-muted-foreground mt-2 text-lg">
@@ -72,7 +72,7 @@ const GallerySettings = () => {
                         <Plus className="w-4 h-4 mr-2" />
                         Ajouter
                     </Button>
-                    <Button variant="gradient" onClick={handleSave} className="flex-1 sm:flex-none h-11 px-8 rounded-xl shadow-lg shadow-melrose-red/20 font-bold">
+                    <Button variant="gradient" onClick={handleSave} className="flex-1 sm:flex-none h-11 px-8 rounded-xl shadow-lg shadow-bohr-red/20 font-bold">
                         <Save className="w-4 h-4 mr-2" />
                         Sauvegarder
                     </Button>
@@ -174,7 +174,7 @@ const GallerySettings = () => {
                                 <div>
                                     <label className="text-xs text-muted-foreground">Image</label>
                                     <div className="mt-1">
-                                        <label className="flex items-center justify-center gap-2 p-3 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-melrose-purple transition-colors">
+                                        <label className="flex items-center justify-center gap-2 p-3 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-bohr-purple transition-colors">
                                             <Upload className="w-4 h-4" />
                                             <span className="text-sm">Téléverser</span>
                                             <input

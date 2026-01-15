@@ -53,7 +53,7 @@ const ChatbotSettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
                 <div>
                     <h1 className="text-3xl font-bold font-display flex items-center gap-3">
-                        <MessageCircle className="w-8 h-8 text-melrose-purple" />
+                        <MessageCircle className="w-8 h-8 text-bohr-purple" />
                         Chatbot IA
                     </h1>
                     <p className="text-muted-foreground mt-1">
@@ -105,7 +105,7 @@ const ChatbotSettings = () => {
                                         )}
                                     </div>
                                     <label className="flex-1">
-                                        <div className="flex items-center justify-center gap-2 p-3 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-melrose-purple transition-colors">
+                                        <div className="flex items-center justify-center gap-2 p-3 border-2 border-dashed border-border rounded-xl cursor-pointer hover:border-bohr-purple transition-colors">
                                             <Upload className="w-4 h-4" />
                                             <span className="text-sm">Changer l'avatar</span>
                                         </div>
@@ -190,7 +190,7 @@ const ChatbotSettings = () => {
                         </CardHeader>
                         <CardContent>
                             <div className="mb-4">
-                                <label className="flex items-center justify-center gap-2 p-6 border-2 border-dashed border-border rounded-2xl cursor-pointer hover:border-melrose-purple transition-colors">
+                                <label className="flex items-center justify-center gap-2 p-6 border-2 border-dashed border-border rounded-2xl cursor-pointer hover:border-bohr-purple transition-colors">
                                     <Upload className="w-6 h-6" />
                                     <span>Téléverser des fichiers (PDF, TXT, DOCX)</span>
                                     <input
@@ -213,7 +213,7 @@ const ChatbotSettings = () => {
                                             className="flex items-center justify-between p-3 rounded-xl bg-muted/50"
                                         >
                                             <div className="flex items-center gap-3">
-                                                <FileText className="w-5 h-5 text-melrose-purple" />
+                                                <FileText className="w-5 h-5 text-bohr-purple" />
                                                 <span className="text-sm">{file}</span>
                                             </div>
                                             <Button

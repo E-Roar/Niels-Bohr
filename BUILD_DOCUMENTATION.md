@@ -1,16 +1,4 @@
-# Les Écoles Melrose - Landing Page
-
-## Original Prompt
-
-```
-scrap and scann teh content of this web page, extract all the sections adn content adn links, i haveuplaoded the png logo named the main logo.png , na duplaoded a style image to copy the visual style from it , it has to be neomorphism with 3d like render and hight contrast and ambiant occusion and colorfull glow , soft light and soft shawdos, and all popups are glassmorphism with froasted blurr glass and glow lights and softer shadows, make it a one page landing page with smooth scroll animations and funcky elegant dynamic ui animations of all ui and sectiosn an buttons , 
-add chatbot on the corner with corner popup and gif image for avatar, make the avatar big enaugh on button and on popup, 
-maek teh gallery 3d like spinning carousel with crazy cool transitions , no lightbox yet, 
-use neomorphism style for rendering teh map as well,
-for the contact form upon submitting send the email and send a resumed text of the input fileds in whtsapp message to this number +212 6525-61659
-and email to this lesecolesmelrose@gmail.com
-make sure it s respnsive and mobile friendly
-```
+# Groupe Scolaire Niels Bohr - Landing Page
 
 ## Design Style Reference
 
@@ -29,7 +17,7 @@ make sure it s respnsive and mobile friendly
    - Glassmorphism styles with backdrop blur
    - Colorful glow effects (purple, blue, rainbow)
    - HSL-based color tokens in design system
-   - Custom button variants (neo, glass, gradient, melrose colors)
+   - Custom button variants (neo, glass, gradient, bohr colors)
    - Custom card variants (neo, glass, neoPressed)
    - Custom input/textarea with neomorphism inset shadows
 
@@ -42,12 +30,12 @@ make sure it s respnsive and mobile friendly
 3. **Hero Section**
    - Animated gradient background
    - Floating decorative elements
-   - Gradient text effect for "Les Écoles Melrose"
+   - Gradient text effect for "Groupe Scolaire Niels Bohr"
    - Stats cards with neomorphism
    - CTA buttons with hover animations
    - Hero image with floating logo badge
 
-4. **About Section (Pourquoi Melrose)**
+4. **About Section (Pourquoi Niels Bohr)**
    - 6 feature cards with icons
    - Staggered reveal animations
    - Mission statement glassmorphism card with rainbow glow
@@ -67,8 +55,8 @@ make sure it s respnsive and mobile friendly
 
 7. **Contact Section**
    - Contact form with all fields
-   - WhatsApp integration (+212 6525-61659)
-   - Email integration (lesecolesmelrose@gmail.com)
+   - WhatsApp integration (+212 753-117012)
+   - Email integration (GroupeScolaireNielsBohr@gmail.com)
    - Contact info cards
    - WhatsApp CTA button
    - Feature checklist
@@ -115,6 +103,8 @@ make sure it s respnsive and mobile friendly
 2. Added logo preloader with animation
 3. Fixed smooth scrolling on menu clicks
 4. Replaced placeholder map with real Leaflet/OpenStreetMap
+5. Refined UI with dark blue text for better readability
+6. Updated all branding to Groupe Scolaire Niels Bohr
 
 ### 📋 Potential Future Enhancements
 
@@ -171,6 +161,6 @@ make sure it s respnsive and mobile friendly
 
 ## Contact Information
 
-- **Phone/WhatsApp**: +212 6525-61659
-- **Email**: lesecolesmelrose@gmail.com
-- **Location**: Casablanca, Morocco
+- **Phone/WhatsApp**: +212 753-117012
+- **Email**: GroupeScolaireNielsBohr@gmail.com
+- **Location**: El Jadida, Morocco

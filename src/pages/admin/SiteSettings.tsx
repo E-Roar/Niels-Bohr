@@ -39,7 +39,7 @@ const SiteSettings = () => {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 pb-6 border-b border-border/50">
                 <div>
                     <h1 className="text-3xl sm:text-4xl font-bold font-display flex items-center gap-3">
-                        <Settings className="w-8 h-8 sm:w-10 sm:h-10 text-melrose-purple shadow-glow-purple/20" />
+                        <Settings className="w-8 h-8 sm:w-10 sm:h-10 text-bohr-purple shadow-glow-purple/20" />
                         Paramètres du site
                     </h1>
                     <p className="text-muted-foreground mt-2 text-lg">
@@ -51,7 +51,7 @@ const SiteSettings = () => {
                         <RotateCcw className="w-4 h-4 mr-2" />
                         Réinitialiser
                     </Button>
-                    <Button variant="gradient" onClick={handleSave} className="flex-1 sm:flex-none h-11 px-8 rounded-xl shadow-lg shadow-melrose-purple/20 font-bold">
+                    <Button variant="gradient" onClick={handleSave} className="flex-1 sm:flex-none h-11 px-8 rounded-xl shadow-lg shadow-bohr-purple/20 font-bold">
                         <Save className="w-4 h-4 mr-2" />
                         Sauvegarder
                     </Button>
@@ -67,7 +67,7 @@ const SiteSettings = () => {
                     <Card className="border-border/50 shadow-sm overflow-hidden h-full">
                         <CardHeader className="bg-muted/30 border-b border-border/30">
                             <CardTitle className="flex items-center gap-2 text-xl">
-                                <Building2 className="w-5 h-5 text-melrose-purple" />
+                                <Building2 className="w-5 h-5 text-bohr-purple" />
                                 Identité
                             </CardTitle>
                             <CardDescription>
@@ -108,7 +108,7 @@ const SiteSettings = () => {
                     <Card className="border-border/50 shadow-sm overflow-hidden h-full">
                         <CardHeader className="bg-muted/30 border-b border-border/30">
                             <CardTitle className="flex items-center gap-2 text-xl">
-                                <Phone className="w-5 h-5 text-melrose-blue" />
+                                <Phone className="w-5 h-5 text-bohr-blue" />
                                 Contact
                             </CardTitle>
                             <CardDescription>
@@ -167,7 +167,7 @@ const SiteSettings = () => {
                     <Card className="border-border/50 shadow-sm overflow-hidden">
                         <CardHeader className="bg-muted/30 border-b border-border/30">
                             <CardTitle className="flex items-center gap-2 text-xl">
-                                <MapPin className="w-5 h-5 text-melrose-green" />
+                                <MapPin className="w-5 h-5 text-bohr-green" />
                                 Adresse
                             </CardTitle>
                             <CardDescription>

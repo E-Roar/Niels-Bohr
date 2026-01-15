@@ -195,7 +195,7 @@ En résumé : tu es un assistant strictement limité aux informations ci-dessus 
 
     // Only send system prompt once per browser session (shared across tabs)
     const hasSystem = typeof window !== 'undefined'
-      ? window.localStorage.getItem('melrose_chat_hasSystemPrompt') === '1'
+      ? window.localStorage.getItem('bohr_chat_hasSystemPrompt') === '1'
       : false;
 
     if (!hasSystem) {
@@ -219,7 +219,7 @@ En résumé : tu es un assistant strictement limité aux informations ci-dessus 
 
       // Mark system prompt as sent for this browser session
       if (!hasSystem && typeof window !== 'undefined') {
-        window.localStorage.setItem('melrose_chat_hasSystemPrompt', '1');
+        window.localStorage.setItem('bohr_chat_hasSystemPrompt', '1');
       }
 
       // Debug: log the full response to see structure

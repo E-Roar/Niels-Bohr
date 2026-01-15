@@ -22,19 +22,19 @@ const buttonVariants = cva(
         link:
           "text-primary underline-offset-4 hover:underline",
         gradient:
-          "bg-gradient-to-r from-melrose-purple via-melrose-blue to-melrose-green text-white shadow-lg hover:shadow-xl hover:translate-y-[-4px] active:translate-y-0",
+          "bg-gradient-to-r from-bohr-purple via-bohr-blue to-bohr-green text-white shadow-lg hover:shadow-xl hover:translate-y-[-4px] active:translate-y-0",
         glass:
           "glass-mid text-foreground border border-white/20 hover:bg-white/30 hover:translate-y-[-2px] shadow-md",
-        melroseYellow:
-          "bg-melrose-yellow text-foreground font-bold hover:opacity-90 shadow-md",
-        melroseRed:
-          "bg-melrose-red text-white font-bold hover:opacity-90 shadow-md",
-        melroseBlue:
-          "bg-melrose-blue text-white font-bold hover:opacity-90 shadow-md",
-        melrosePurple:
-          "bg-melrose-purple text-white font-bold hover:opacity-90 shadow-md",
-        melroseGreen:
-          "bg-melrose-green text-white font-bold hover:opacity-90 shadow-md",
+        bohrYellow:
+          "bg-bohr-yellow text-foreground font-bold hover:opacity-90 shadow-md",
+        bohrRed:
+          "bg-bohr-red text-white font-bold hover:opacity-90 shadow-md",
+        bohrBlue:
+          "bg-bohr-blue text-white font-bold hover:opacity-90 shadow-md",
+        bohrPurple:
+          "bg-bohr-purple text-white font-bold hover:opacity-90 shadow-md",
+        bohrGreen:
+          "bg-bohr-green text-white font-bold hover:opacity-90 shadow-md",
       },
       size: {
         default: "h-12 px-6 py-3",

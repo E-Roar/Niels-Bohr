@@ -60,7 +60,9 @@ const AdminLayout = () => {
             {/* Logo */}
             <div className={`p-4 border-b border-border ${sidebarCollapsed && !mobile ? 'px-2' : ''}`}>
                 <div className="flex items-center gap-3">
-                    <img src={logo} alt="Groupe Scolaire Niels Bohr" className={`${sidebarCollapsed && !mobile ? 'h-10' : 'h-12'} w-auto`} />
+                    <div className="p-2 rounded-full logo-gradient-bg">
+                        <img src={logo} alt="Groupe Scolaire Niels Bohr" className={`${sidebarCollapsed && !mobile ? 'h-6' : 'h-8'} w-auto brightness-0 invert`} />
+                    </div>
                     {(!sidebarCollapsed || mobile) && (
                         <motion.div
                             initial={{ opacity: 0 }}
@@ -84,7 +86,7 @@ const AdminLayout = () => {
                         onClick={() => mobile && setMobileMenuOpen(false)}
                         className={({ isActive }) =>
                             `flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 ${isActive
-                                ? 'bg-gradient-to-r from-melrose-purple to-melrose-blue text-white shadow-glow-purple'
+                                ? 'bg-gradient-to-r from-bohr-purple to-bohr-blue text-white shadow-glow-purple'
                                 : 'text-foreground/70 hover:text-foreground hover:bg-muted'
                             } ${sidebarCollapsed && !mobile ? 'justify-center px-2' : ''}`
                         }

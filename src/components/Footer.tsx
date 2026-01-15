@@ -21,7 +21,7 @@ export const Footer = () => {
           </p>
           <div className="flex items-center gap-2 text-sm text-white/60">
             <span>Fait avec</span>
-            <Heart className="w-4 h-4 text-melrose-red fill-melrose-red" />
+            <Heart className="w-4 h-4 text-bohr-red fill-bohr-red" />
             <span>à {content.siteInfo.city}, {content.siteInfo.country}</span>
           </div>
           <p className="text-xs text-white/40">© 2024 {content.siteInfo.name}. Tous droits réservés.</p>
