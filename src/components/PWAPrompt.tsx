@@ -81,7 +81,7 @@ export const PWAPrompt = () => {
 
                     <div className="flex items-start gap-5 relative z-0">
                         <div className="w-20 h-20 flex items-center justify-center p-0 shrink-0">
-                            <img src={logo} alt="Academy Logo" className="w-full h-full object-contain drop-shadow-lg" />
+                            <img src={logo} alt="Niels Bohr Logo" className="w-full h-full object-contain drop-shadow-lg" />
                         </div>
                         <div className="flex-1 pt-1">
                             <h3 className="font-bold text-xl tracking-tight mb-2 text-foreground font-display">

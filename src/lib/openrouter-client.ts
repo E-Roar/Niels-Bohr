@@ -1,12 +1,17 @@
 import OpenAI from 'openai';
 
+const apiKey = import.meta.env.VITE_OPENROUTER_API_KEY || '';
+if (!apiKey) {
+  console.warn('OpenRouter: VITE_OPENROUTER_API_KEY is missing. Chatbot will return 401.');
+}
+
 // OpenRouter client (OpenAI-compatible)
 const openrouter = new OpenAI({
-  apiKey: import.meta.env.VITE_OPENROUTER_API_KEY || '',
+  apiKey: apiKey,
   baseURL: 'https://openrouter.ai/api/v1',
   dangerouslyAllowBrowser: true,
   defaultHeaders: {
-    'HTTP-Referer': typeof window !== 'undefined' ? window.location.href : '',
+    'HTTP-Referer': typeof window !== 'undefined' ? window.location.href : 'https://neilsbohr.ma/',
     'X-Title': 'Groupe Scolaire Niels Bohr',
   },
 });

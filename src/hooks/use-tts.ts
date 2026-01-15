@@ -89,11 +89,19 @@ export const useTextToSpeech = ({ language }: TTSOptions) => {
         utterance.onstart = () => setIsSpeaking(true);
         utterance.onend = () => setIsSpeaking(false);
         utterance.onerror = (e) => {
-            console.error('TTS Error:', e);
+            // Silently handle 'interrupted' errors which occur during cancel()
+            if ((e as any).error !== 'interrupted') {
+                console.error('TTS Error:', e);
+            }
             setIsSpeaking(false);
         };
 
-        synth.current.speak(utterance);
+        // Small delay to ensure any previous cancel() has fully propagated
+        setTimeout(() => {
+            if (!isMuted && synth.current) {
+                synth.current.speak(utterance);
+            }
+        }, 50);
     }, [supported, isMuted, getVoice, language]);
 
     const cancel = useCallback(() => {
