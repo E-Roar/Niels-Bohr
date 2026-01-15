@@ -19,7 +19,7 @@ export default defineConfig(({ mode }) => ({
     }),
     VitePWA({
       registerType: 'autoUpdate',
-      includeAssets: ['logo.png', 'favicon.ico', 'robots.txt', 'placeholder.svg'],
+      includeAssets: ['favicon.ico', 'robots.txt', 'placeholder.svg'],
       devOptions: {
         enabled: true,
         type: 'module',
