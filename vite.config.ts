@@ -25,7 +25,8 @@ export default defineConfig(({ mode }) => ({
         type: 'module',
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,ico,png,svg,woff,woff2,webp}'],
+        globPatterns: ['**/*.{js,css,html,ico,svg,woff,woff2,webp}'],
+        globIgnores: ['**/logo.png'], // Specifically ignore to prevent conflict with manifest icons
         runtimeCaching: [
           {
             urlPattern: /^https:\/\/fonts\.googleapis\.com\/.*/i,

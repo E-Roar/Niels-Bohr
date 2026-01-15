@@ -32,9 +32,11 @@ export const generateResponse = async (
       messages,
     };
 
-    // Only send model if explicitly configured
+    // Only send model if explicitly configured, else use default
     if (model) {
       payload.model = model;
+    } else {
+      payload.model = 'mistralai/mistral-7b-instruct:free'; // Default stable model
     }
 
     // Only include tools if provided

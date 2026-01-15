@@ -190,10 +190,10 @@ const frData: SiteData = {
     chatbot: {
         name: 'Assistant Niels Bohr',
         avatar: chatbotAvatar,
-        greeting: "Bonjour ! 👋 Je suis l'assistant virtuel du Groupe Scolaire Niels Bohr.\n\nJe peux vous renseigner sur nos cycles, du préscolaire au lycée, et sur les inscriptions.\n\nComment puis-je vous aider ?",
+        greeting: "Bonjour ! Je suis l'assistant virtuel du Groupe Scolaire Niels Bohr.\n\nJe peux vous renseigner sur nos cycles, du préscolaire au lycée, et sur les inscriptions.\n\nComment puis-je vous aider ?",
         systemPrompt: "Tu es l'assistant du Groupe Scolaire Niels Bohr, un établissement privé d'excellence du préscolaire au lycée à ALALLYA, El Jadida.",
         ragFiles: [],
-        fallbackResponse: "Je ne suis pas sûr de la réponse. N'hésitez pas à nous appeler au 0673-384053 ou à nous envoyer un email à GroupeScolaireNielsBohr@gmail.com. 📞",
+        fallbackResponse: "Je ne suis pas sûr de la réponse. N'hésitez pas à nous appeler au 0673-384053 ou à nous envoyer un email à GroupeScolaireNielsBohr@gmail.com.",
     },
 };
 
@@ -267,10 +267,10 @@ const arData: SiteData = {
     chatbot: {
         name: 'مساعد نيلز بور',
         avatar: chatbotAvatar,
-        greeting: "مرحباً! 👋 أنا المساعد الذكي لمجموعة مدارس نيلز بور.\n\nيمكنني مساعدتك بمعلومات حول أسلاكنا، من التعليم الأولي للثانوي، وعن التسجيل.\n\nكيف يمكنني مساعدتك؟",
+        greeting: "مرحباً! أنا المساعد الذكي لمجموعة مدارس نيلز بور.\n\nيمكنني مساعدتك بمعلومات حول أسلاكنا، من التعليم الأولي للثانوي، وعن التسجيل.\n\nكيف يمكنني مساعدتك؟",
         systemPrompt: "أنت مساعد مجموعة مدارس نيلز بور، مؤسسة خاصة متميزة من التعليم الأولي إلى الثانوي في الجديدة.",
         ragFiles: [],
-        fallbackResponse: "عذراً، لم أتمكن من الإجابة. يمكنك الاتصال بنا على 0673-384053 أو مراسلتنا عبر البريد الإلكتروني GroupeScolaireNielsBohr@gmail.com. 📞",
+        fallbackResponse: "عذراً، لم أتمكن من الإجابة. يمكنك الاتصال بنا على 0673-384053 أو مراسلتنا عبر البريد الإلكتروني GroupeScolaireNielsBohr@gmail.com.",
     },
 };
 
